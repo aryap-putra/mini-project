@@ -1,0 +1,84 @@
+[2024-03-11 08:03:20,871] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.71.27:5000
+[2024-03-11 08:03:20,872] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-11 08:38:55,311] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.71.27:5000
+[2024-03-11 08:38:55,312] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-11 08:39:02,590] INFO in _internal: 192.168.71.27 - - [11/Mar/2024 08:39:02] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-03-11 08:39:03,158] INFO in _internal: 192.168.71.27 - - [11/Mar/2024 08:39:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-03-11 08:45:55,220] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.71.27:5000
+[2024-03-11 08:45:55,220] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-11 08:46:12,135] INFO in _internal: 192.168.71.27 - - [11/Mar/2024 08:46:12] "[33mGET / HTTP/1.1[0m" 404 -
+[2024-03-11 08:51:11,184] INFO in _internal: 127.0.0.1 - - [11/Mar/2024 08:51:11] "GET /pokemon/poke HTTP/1.1" 200 -
+[2024-03-11 08:53:53,457] INFO in _internal: 127.0.0.1 - - [11/Mar/2024 08:53:53] "GET /pokemon/poke/pikachu HTTP/1.1" 200 -
+[2024-03-11 08:55:03,346] ERROR in review: Traceback (most recent call last):
+  File "C:\Users\hp\Documents\SysEng\flask 2\app\apis\pokemon\resources\poke\review.py", line 60, in get
+    reviews = PokeReview.query.filter_by(pokemon_name=name).all()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2181, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2050, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1144, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 3279, in connect
+    return self._connection_cls(self)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 3303, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\pymysql\connections.py", line 358, in __init__
+    self.connect()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\pymysql\connections.py", line 664, in connect
+    self._request_authentication()
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\pymysql\connections.py", line 976, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\pymysql\_auth.py", line 266, in caching_sha2_password_auth
+    data = sha2_rsa_encrypt(conn.password, conn.salt, conn.server_public_key)
+  File "C:\Users\hp\Documents\SysEng\flask 2\.venv\lib\site-packages\pymysql\_auth.py", line 143, in sha2_rsa_encrypt
+    raise RuntimeError(
+RuntimeError: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+
+[2024-03-11 08:55:03,358] INFO in _internal: 127.0.0.1 - - [11/Mar/2024 08:55:03] "[35m[1mGET /pokemon/poke/pikachu/review HTTP/1.1[0m" 500 -
+[2024-03-11 08:59:26,192] INFO in _internal: 127.0.0.1 - - [11/Mar/2024 08:59:26] "GET /pokemon/poke HTTP/1.1" 200 -
